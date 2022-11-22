@@ -1,10 +1,12 @@
-package gb.hw.education.data;
+package gb.hw.education.data.classes;
+
+import gb.hw.education.data.interfaces.IGroup;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class EducationGroup implements IGroup{
+public class EducationGroup implements IGroup {
     private int groupNo;
     private String name;
     private Teacher teacher;

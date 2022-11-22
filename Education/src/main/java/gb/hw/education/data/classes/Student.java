@@ -1,4 +1,6 @@
-package gb.hw.education.data;
+package gb.hw.education.data.classes;
+
+import gb.hw.education.data.interfaces.IPerson;
 
 import java.util.Objects;
 
@@ -6,7 +8,7 @@ import java.util.Objects;
  * Класс студент, наследуется от интерфейса Person
  */
 
-public class Student implements IPerson{
+public class Student implements IPerson {
     private String name;
     private String birthDate;
     private int StudentId;

@@ -1,4 +1,4 @@
-package gb.hw.education.data;
+package gb.hw.education.data.interfaces;
 
 import java.util.Date;
 
