@@ -2,25 +2,22 @@ package gb.hw.education.data.classes;
 
 import gb.hw.education.data.interfaces.IPerson;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * Класс студент, наследуется от интерфейса Person
  */
 
-public class Student implements IPerson {
+public class Student implements IPerson, Serializable {
     private String name;
     private String birthDate;
     private int StudentId;
 
-    /**
-     * Конструктор
-     * @param name      - ФИО
-     * @param birthDate - дата рождения
-     */
-    public Student(String name, String birthDate) {
+    public Student(String name, String birthDate, int studentId) {
         this.name = name;
         this.birthDate = birthDate;
+        StudentId = studentId;
     }
 
     @Override

@@ -2,11 +2,12 @@ package gb.hw.education.data.classes;
 
 import gb.hw.education.data.interfaces.IGroup;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class EducationGroup implements IGroup {
+public class EducationGroup implements IGroup, Serializable {
     private int groupNo;
     private String name;
     private Teacher teacher;
@@ -27,12 +28,30 @@ public class EducationGroup implements IGroup {
     }
 
     /**
+     * Конструктор с 2мя параметрами
+     * @param groupNo
+     * @param name
+     */
+    public EducationGroup(int groupNo, String name) {
+        this(groupNo, name, null, new ArrayList<>());
+    }
+
+    /**
      * Конструктор с 1м параметром
      * @param groupNo   - номер группы
      */
     public EducationGroup(int groupNo) {
-        this(groupNo, "", null, new ArrayList<>());
+        this(groupNo, "");
     }
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
+
 
     /**
      * Добавление студента
@@ -44,6 +63,10 @@ public class EducationGroup implements IGroup {
 
     public void deleteStudent(Student student){
         students.remove(student);
+    }
+
+    public List<Student> getStudents() {
+        return students;
     }
 
     public void deleteStudent(int position){

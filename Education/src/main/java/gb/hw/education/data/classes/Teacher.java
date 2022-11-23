@@ -2,10 +2,12 @@ package gb.hw.education.data.classes;
 
 import gb.hw.education.data.interfaces.IPerson;
 
+import java.io.Serializable;
+
 /**
  * Класс преподаватель
  */
-public class Teacher implements IPerson {
+public class Teacher implements IPerson, Serializable {
     private String name;
     private String birthDate;
     private int tabNo;
